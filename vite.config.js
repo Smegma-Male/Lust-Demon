@@ -32,7 +32,8 @@ export default defineConfig({
         enabled: true,
       },
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"],
-      base: "/Lust-Demon/", // name of distribution repo
+      // base: "/Lust-Demon/", // name of distribution repo
+      base: "./", // name of distribution repo
       manifest: {
         name: "PWA test",
         short_name: "Visual Novel",
