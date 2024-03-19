@@ -35,7 +35,7 @@ export default defineConfig({
       // base: "/Lust-Demon/", // name of distribution repo
       base: "./", // name of distribution repo
       manifest: {
-        name: "PWA test",
+        name: "Visual Novel",
         short_name: "Visual Novel",
         description: "This will be a visual novel lmao",
         theme_color: "#ffffff",
