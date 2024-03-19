@@ -6,6 +6,7 @@ import {
 } from "@vite-pwa/assets-generator/config"
 
 export default defineConfig({
+  base: "/Lust-Demon/", // name of distribution repo
   server: {
     port: 3000, // controls which port to use.
     open: "/index.html", // which addres we should open into.
@@ -32,8 +33,6 @@ export default defineConfig({
         enabled: true,
       },
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"],
-      // base: "/Lust-Demon/", // name of distribution repo
-      base: "./", // name of distribution repo
       manifest: {
         name: "Visual Novel",
         short_name: "Visual Novel",
