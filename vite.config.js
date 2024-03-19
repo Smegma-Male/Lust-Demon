@@ -49,14 +49,14 @@ export default defineConfig({
           // Screenshots when installing PWA.
           // https://web.dev/patterns/web-apps/richer-install-ui/
           {
-            src: "/pwa-512x512.png",
+            src: "pwa-512x512.png",
             sizes: "512x512", // Width and Height: 320px and at most 3,840px
             type: "image/png",
             form_factor: "wide",
             label: "default picture desktop",
           },
           {
-            src: "/pwa-512x512.png",
+            src: "pwa-512x512.png",
             sizes: "512x512", // Width and Height: 320px and at most 3,840px
             type: "image/png",
             form_factor: "narrow",
