@@ -1,5 +1,6 @@
 import { lerp } from "three/src/math/MathUtils"
 import "./three.css"
+import peepoImage from "../../assets/images/peepo.jpg"
 
 import * as THREE from "three"
 
@@ -8,13 +9,6 @@ let aspectRatio = window.innerWidth / window.innerHeight
 const scene = new THREE.Scene()
 const camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000)
 camera.position.setZ(30)
-
-window.onresize = () => {
-  console.log("rezize")
-  aspectRatio = window.innerWidth / window.innerHeight
-  camera.aspect = aspectRatio
-  renderer.setSize(window.innerWidth, window.innerHeight)
-}
 
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector("#canvas"),
@@ -55,7 +49,7 @@ const ambientLight = new THREE.AmbientLight("white")
 scene.add(ambientLight)
 
 // Images
-const texture = new THREE.TextureLoader().load("../../assets/images/peepo.jpg")
+const texture = new THREE.TextureLoader().load(peepoImage)
 const peepoCube = new THREE.Mesh(
   new THREE.BoxGeometry(3, 15, 3),
   new THREE.MeshBasicMaterial({
@@ -63,7 +57,6 @@ const peepoCube = new THREE.Mesh(
   })
 )
 scene.add(peepoCube)
-console.log(texture)
 
 let targetColor = {
   r: Math.random(),
@@ -81,6 +74,12 @@ function renderLoop() {
   changeCubeColor()
 
   renderer.render(scene, camera) // draw
+}
+
+window.onresize = () => {
+  aspectRatio = window.innerWidth / window.innerHeight
+  camera.aspect = aspectRatio
+  renderer.setSize(window.innerWidth, window.innerHeight)
 }
 
 document.querySelector("#app").innerHTML = `
