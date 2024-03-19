@@ -19,5 +19,8 @@
     "prettier": "^3.2.5",
     "vite": "^5.1.6",
     "vite-plugin-pwa": "^0.19.4"
+  },
+  "dependencies": {
+    "three": "^0.162.0"
   }
 }
