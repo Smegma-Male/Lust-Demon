@@ -8,7 +8,7 @@ import {
 export default defineConfig({
   base: "/Lust-Demon/", // name of distribution repo
   server: {
-    port: 3000, // controls which port to use.
+    port: 3008, // controls which port to use.
     open: "/index.html", // which addres we should open into.
   },
   build: {
@@ -16,7 +16,8 @@ export default defineConfig({
       input: {
         // list of all available pages in your application
         main: path.resolve(__dirname, "index.html"),
-        // otherpage: path.resolve(__dirname, "src/other_page/otherpage.html"),
+        three: path.resolve(__dirname, "src/three/three.html"),
+        pixie: path.resolve(__dirname, "src/pixie/pixie.html"),
       },
     },
   },

@@ -11,6 +11,10 @@ document.querySelector("#app").innerHTML = `
     <h2>Increase Goon Count!</h2>
     <div class="card">
       <button id="counter" type="button"></button>
+      <br>
+      <br>
+      <a href="src/three/three.html">Try ThreeJS</a>
+      <a href="src/pixie/pixie.html">Try PixieJS</a>
     </div>
     <p>
       This project uses the Vite Build Tool.
